@@ -5,5 +5,15 @@ module.exports = defineConfig({
     allowedHosts: "meats-game.bridgetools.dev",
     host: "localhost",
     port: 3015
+  },
+  pwa: {
+      name: 'Test',
+      iconPaths: {
+        favicon32: '',
+        favicon16: '',
+        appleTouchIcon: '',
+        maskIcon: '',
+        msTileImage: ''
+      }
   }
 })
