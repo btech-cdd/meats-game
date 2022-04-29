@@ -14,7 +14,7 @@
       class="game-image"
     >
       <div
-        v-for="cut in primalcuts"
+        v-for="cut in primals"
         :key="cut"
       >
         <img 
@@ -35,7 +35,7 @@
     </div>
     <div class="game-items">
       <div
-        v-for="cut in primalcuts"
+        v-for="cut in primals"
         :key="cut"
       >
         <div
@@ -51,16 +51,16 @@
         </div>
       </div>
     </div>
-  </div>
-  <div
-    v-if="selectedItem !== ''"
-    id="selected-item"
-    :style="{
-      'left': mousePos.x - 16 + 'px',
-      'top': mousePos.y - 16 + 'px'
-    }"
-  >
-    {{ selectedItem }}
+    <div
+      v-if="selectedItem !== ''"
+      class="selected-item"
+      :style="{
+        'left': mousePos.x - 16 + 'px',
+        'top': mousePos.y - 16 + 'px'
+      }"
+    >
+      {{ selectedItem }}
+    </div>
   </div>
 </template>
 
@@ -77,11 +77,8 @@ export default defineComponent({
   },
   data() {
     return {
-      style: {
-        itemwidth: '20rem'
-      },
       selectedItem: "",
-      primalcuts: [
+      primals: [
         'brisket',
         'chuck',
         'flank',
@@ -123,8 +120,8 @@ export default defineComponent({
       var alpha;
 
       ctx!.clearRect(0, 0, ctx!.canvas.width, ctx!.canvas.height);
-      for (let i in this.primalcuts) {
-        let cut = this.primalcuts[i];
+      for (let i in this.primals) {
+        let cut = this.primals[i];
         // Draw image to canvas
         // and read Alpha channel value
         let img = document.getElementById(`cow-cuts-img-${cut}`) as HTMLCanvasElement;
@@ -139,7 +136,7 @@ export default defineComponent({
           if (this.selectedItem !== '') {
             if (this.selectedItem == cut) {
               this.correct.push(cut);
-              if (this.correct.length == this.primalcuts.length) {
+              if (this.correct.length == this.primals.length) {
                 alert(`Congratulations! You've sorted all of the primal cuts.`);
               }
             } else {
@@ -170,38 +167,37 @@ export default defineComponent({
   margin-left: calc((100% - (1024px + 20rem)) / 2);
   grid-template-columns: auto 20rem;
 }
-.game-image {
+.game-primals-container .game-image {
   grid-column-start: 1;
   grid-column-end: 2;
 }
-.game-items {
+.game-primals-container .game-items {
   grid-column-start: 2;
   grid-column-end: 3;
 }
-.game-item {
+.game-primals-container .game-item {
   border: 1px solid #000000;
   padding: 0.5rem;
   cursor: pointer;
   user-select: none;
 }
-.cow-cuts-img {
+.game-primals-container .cow-cuts-img {
   width: 100%;
   max-width: 1024px;
 }
 
-.cow-cuts-img-correct {
-  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
-  opacity: 50%;
+.game-primals-container .cow-cuts-img-correct {
+  filter: invert(48%) sepia(58%) saturate(639%) hue-rotate(83deg) brightness(93%) contrast(87%);
 }
 
-#selected-item {
+.game-primals-container .selected-item {
   position: absolute;
   pointer-events: none;
   user-select: none;
   z-index: 100;
   background-color: #FFFFFF;
   border: solid 1px #000000;
-  width: v-bind(style.itemwidth);
+  width: 20rem;
   padding: 0.5rem;
 }
 </style>

@@ -8,7 +8,7 @@
       class="game-image"
     >
       <div
-        v-for="cut in primalcuts"
+        v-for="cut in primals"
         :key="cut"
       >
         <img 
@@ -41,7 +41,7 @@ export default defineComponent({
       style: {
         itemwidth: '20rem'
       },
-      primalcuts: [
+      primals: [
         'brisket',
         'chuck',
         'flank',
@@ -74,44 +74,23 @@ export default defineComponent({
   padding: .5rem;
   border-radius: 10px;
 }
-.primals-container {
+.primals-container .primals-container {
   display: grid;
   max-width: calc(1024px + 20rem);
   margin-left: calc((100% - (1024px + 20rem)) / 2);
   grid-template-columns: auto 20rem;
 }
-.game-image {
+.primals-container .game-image {
   grid-column-start: 1;
   grid-column-end: 2;
 }
-.game-items {
+.primals-container .game-items {
   grid-column-start: 2;
   grid-column-end: 3;
 }
-.game-item {
-  border: 1px solid #000000;
-  padding: 0.5rem;
-  cursor: pointer;
-  user-select: none;
-}
-.cow-cuts-img {
+.primals-container .cow-cuts-img {
   width: 100%;
   max-width: 1024px;
 }
 
-.cow-cuts-img-correct {
-  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
-  opacity: 50%;
-}
-
-#selected-item {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 100;
-  background-color: #FFFFFF;
-  border: solid 1px #000000;
-  width: v-bind(style.itemwidth);
-  padding: 0.5rem;
-}
 </style>
