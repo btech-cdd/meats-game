@@ -21,16 +21,6 @@
     <div class="game-items">
     </div>
   </div>
-  <div
-    v-if="selectedItem !== ''"
-    id="selected-item"
-    :style="{
-      'left': mousePos.x - 16 + 'px',
-      'top': mousePos.y - 16 + 'px'
-    }"
-  >
-    {{ selectedItem }}
-  </div>
 </template>
 
 <script lang="ts">
