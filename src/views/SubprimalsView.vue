@@ -158,6 +158,7 @@ export default defineComponent({
       let subprimals = this.subprimals;
       let subsInPrimal = [];
       for (let s in subprimals) {
+        console.log(s);
         let subprimal = subprimals[s];
         if (subprimal.primal === primal) {
           subsInPrimal.push(subprimal);
