@@ -163,7 +163,7 @@ export default defineComponent({
           name: 't-bone',
           primal: 'short-loin'
         },
-      ] as {name: string, primal: string},
+      ] as {name: string, primal: string}[],
       correct: [
 
       ] as string[],
