@@ -1,4 +1,6 @@
 <template>
+  <p>Drag and drop the name of each subprimal cut to primal from which it comes.</p>
+  <router-link class="start-button" to="/subprimals">Restart</router-link>
   <div
     class="game-subprimals-container"
     :style="{
@@ -39,7 +41,7 @@
           }"
         >
           <p>{{cut.name}}</p>
-          <img draggable="false" :src="assetUrl('angus-beef-subprimals/' + cut.name.replace(' ', '-') + '.png')">
+          <img draggable="false" :src="assetUrl('angus-beef-subprimals/' + cut.name.replaceAll(' ', '-') + '.png')">
         </div>
         <div
           v-else
@@ -52,7 +54,7 @@
           }"
         >
           <p>SORTED</p>
-          <img draggable="false" :src="assetUrl('angus-beef-subprimals/' + cut.name.replace(' ', '-') + '.png')">
+          <img draggable="false" :src="assetUrl('angus-beef-subprimals/' + cut.name.replaceAll(' ', '-') + '.png')">
         </div>
       </div>
     </div>
@@ -65,7 +67,7 @@
       }"
     >
       <p>{{ selectedItem.name }}</p>
-      <img draggable="false" :src="assetUrl('angus-beef-subprimals/' + selectedItem.name.replace(' ', '-') + '.png')">
+      <img draggable="false" :src="assetUrl('angus-beef-subprimals/' + selectedItem.name.replaceAll(' ', '-') + '.png')">
     </div>
   </div>
 </template>

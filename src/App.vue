@@ -2,7 +2,7 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/primals">Primals</router-link> |
-    <router-link to="/game-subprimals">Subprimals</router-link>
+    <router-link to="/subprimals">Subprimals</router-link>
   </nav>
   <router-view/>
 </template>
