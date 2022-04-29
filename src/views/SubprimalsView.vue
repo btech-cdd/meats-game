@@ -146,9 +146,9 @@ export default defineComponent({
       ] as {name: string, primal: string},
       correct: [
 
-      ] as string[]
-    },
-    ctx: document.createElement("canvas").getContext("2d")
+      ] as string[],
+      ctx: document.createElement("canvas").getContext("2d")
+    };
   },
   methods: {
     assetUrl(assetName: string) {
