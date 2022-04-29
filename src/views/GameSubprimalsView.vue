@@ -4,7 +4,7 @@
   <div
     class="game-subprimals-container"
     :style="{
-      cursor: selectedItem !== '' ? 'grabbing' : '',
+      cursor: selectedItem.name !== '' ? 'grabbing' : '',
     }"
     @mouseup="selectedItem = { name: '', primal: '' }"
     @mousemove="onMouseMove($event)"
