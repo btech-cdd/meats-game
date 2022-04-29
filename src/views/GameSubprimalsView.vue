@@ -85,7 +85,7 @@ export default defineComponent({
   },
   data() {
     return {
-      selectedItem: undefined as { name: string, primal: string },
+      selectedItem: undefined,
       primals: [
         'brisket',
         'chuck',
