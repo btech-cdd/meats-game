@@ -37,7 +37,7 @@
           class="game-item"
           :style="{
             visibility: selectedItem.name == cut.name ? 'hidden' : 'visible',
-            cursor: selectedItem !== '' ? 'grabbing' : 'pointer',
+            cursor: selectedItem.name !== '' ? 'grabbing' : 'pointer',
           }"
         >
           <p>{{cut.name}}</p>
