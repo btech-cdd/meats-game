@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/game-primals">Primals</router-link> |
+    <router-link to="/primals">Primals</router-link> |
     <router-link to="/game-subprimals">Subprimals</router-link>
   </nav>
   <router-view/>
