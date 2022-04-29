@@ -1,6 +1,6 @@
 <template>
   <p>Drag and drop the name of each primal cut to its location on the cow.</p>
-  <router-link class="start-button" to="/primals">Restart</router-link>
+  <router-link class="button" to="/primals">Restart</router-link>
   <div
     class="game-primals-container"
     :style="{
@@ -153,14 +153,6 @@ export default defineComponent({
 });
 </script>
 <style>
-.start-button {
-  text-decoration: none;
-  border: 1px solid #000000;
-  background-color: #000000;
-  color: #FFFFFF;
-  padding: .5rem;
-  border-radius: 10px;
-}
 .game-primals-container {
   display: grid;
   max-width: calc(1024px + 20rem);

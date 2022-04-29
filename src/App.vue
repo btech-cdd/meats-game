@@ -28,4 +28,12 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+.button {
+  text-decoration: none;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: .5rem;
+  border-radius: 10px;
+}
 </style>

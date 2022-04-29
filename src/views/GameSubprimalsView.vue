@@ -1,6 +1,6 @@
 <template>
   <p>Drag and drop the name of each subprimal cut to primal from which it comes.</p>
-  <router-link class="start-button" to="/subprimals">Restart</router-link>
+  <router-link class="button" to="/subprimals">Restart</router-link>
   <div
     class="game-subprimals-container"
     :style="{
