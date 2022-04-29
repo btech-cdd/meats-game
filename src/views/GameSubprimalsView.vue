@@ -248,6 +248,7 @@ export default defineComponent({
   padding: 0.5rem;
   cursor: pointer;
   user-select: none;
+  height: 10rem;
 }
 .game-subprimals-container .cow-cuts-img {
   width: 100%;
