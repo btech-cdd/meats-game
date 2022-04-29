@@ -31,24 +31,6 @@
         />
       </div>
     </div>
-    <div class="game-items">
-      <div
-        v-for="cut in primalcuts"
-        :key="cut"
-      >
-        <div
-          v-if="!correct.includes(cut)"
-          @mousedown="selectedItem = cut"
-          class="game-item"
-          :style="{
-            color: selectedItem == cut ? '#FFFFFF' : '#000000',
-            cursor: selectedItem !== '' ? 'grabbing' : 'pointer',
-          }"
-        >
-          {{ cut }}
-        </div>
-      </div>
-    </div>
   </div>
   <div
     v-if="selectedItem !== ''"
@@ -66,7 +48,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'GamePrimalsView',
+  name: 'GameSubprimalsView',
   components: {
   },
   computed: {
@@ -156,7 +138,7 @@ export default defineComponent({
 <style>
 .game-primals-container {
   display: grid;
-  grid-template-columns: auto v-bind(style.itemwidth);
+  grid-template-columns: auto 20rem;
 }
 .game-image {
   grid-column-start: 1;

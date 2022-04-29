@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <img style="display: none;" alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld style="display: none;" msg="Welcome to Your Vue.js + TypeScript App"/>
+    <p>Select either the Primals or Subprimals game to get started.</p>
   </div>
 </template>
 
