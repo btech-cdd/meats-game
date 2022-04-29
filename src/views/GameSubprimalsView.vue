@@ -59,7 +59,7 @@
       </div>
     </div>
     <div
-      v-if="selectedItem !== ''"
+      v-if="selectedItem !== undefined"
       class="selected-item"
       :style="{
         'left': mousePos.x - 16 + 'px',
@@ -85,7 +85,7 @@ export default defineComponent({
   },
   data() {
     return {
-      selectedItem: "",
+      selectedItem: undefined as { name: string, primal: string },
       primals: [
         'brisket',
         'chuck',
@@ -207,7 +207,7 @@ export default defineComponent({
         if( alpha===0 ) {
           // console.log("NOT " + cut);
         } else {
-          if (this.selectedItem !== '') {
+          if (this.selectedItem !== undefined) {
             if (this.selectedItem.primal == cut) {
               this.correct.push(this.selectedItem.name);
               if (this.correct.length == this.subprimals.length) {
