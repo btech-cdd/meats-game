@@ -92,20 +92,16 @@ export default defineComponent({
           primal: 'chuck'
         },
         {
+          name: 'club steak',
+          primal: 'short-loin'
+        },
+        {
           name: 'flank',
           primal: 'flank'
         },
         {
           name: 'ground beef',
           primal: 'fore-shank'
-        },
-        {
-          name: 'rolled rib roast',
-          primal: 'rib'
-        },
-        {
-          name: 'standing rib roast',
-          primal: 'rib'
         },
         {
           name: 'market steak',
@@ -116,33 +112,37 @@ export default defineComponent({
           primal: 'plate'
         },
         {
-          name: 'club steak',
-          primal: 'short-loin'
-        },
-        {
-          name: 't-bone',
-          primal: 'short-loin'
-        },
-        {
           name: 'porterhouse',
           primal: 'short-loin'
         },
         {
-          name: 'sirloin',
-          primal: 'loin-end'
+          name: 'rolled rib roast',
+          primal: 'rib'
         },
         {
           name: 'round',
           primal: 'round'
         },
         {
+          name: 'rump roast',
+          primal: 'round'
+        },
+        {
+          name: 'sirloin',
+          primal: 'loin-end'
+        },
+        {
+          name: 'standing rib roast',
+          primal: 'rib'
+        },
+        {
           name: 'stew meat',
           primal: 'hind-shank'
         },
         {
-          name: 'rump roast',
-          primal: 'round'
-        }
+          name: 't-bone',
+          primal: 'short-loin'
+        },
       ] as {name: string, primal: string},
       correct: [
 

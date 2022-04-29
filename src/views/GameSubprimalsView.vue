@@ -121,7 +121,7 @@ export default defineComponent({
         },
         {
           name: 'ground beef',
-          primal: 'brisket'
+          primal: 'fore-shank'
         },
         {
           name: 'market steak',
@@ -136,8 +136,8 @@ export default defineComponent({
           primal: 'short-loin'
         },
         {
-          name: 'sirloin',
-          primal: 'loin-end'
+          name: 'rolled rib roast',
+          primal: 'rib'
         },
         {
           name: 'round',
@@ -146,7 +146,23 @@ export default defineComponent({
         {
           name: 'rump roast',
           primal: 'round'
-        }
+        },
+        {
+          name: 'sirloin',
+          primal: 'loin-end'
+        },
+        {
+          name: 'standing rib roast',
+          primal: 'rib'
+        },
+        {
+          name: 'stew meat',
+          primal: 'hind-shank'
+        },
+        {
+          name: 't-bone',
+          primal: 'short-loin'
+        },
       ] as {name: string, primal: string},
       correct: [
 
