@@ -147,7 +147,8 @@ export default defineComponent({
       correct: [
 
       ] as string[]
-    }
+    },
+    ctx: document.createElement("canvas").getContext("2d")
   },
   methods: {
     assetUrl(assetName: string) {
