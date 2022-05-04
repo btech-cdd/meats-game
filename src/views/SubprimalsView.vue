@@ -104,7 +104,7 @@ export default defineComponent({
           primal: 'fore-shank'
         },
         {
-          name: 'market steak',
+          name: 'ribeye steak',
           primal: 'rib'
         },
         {
