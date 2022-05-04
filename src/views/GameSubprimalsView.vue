@@ -215,7 +215,9 @@ export default defineComponent({
               }
             } else {
               //change this to not be alert, but some custom alert message
-              alert(`Sorry, the ${this.selectedItem.name} doesn't come from the ${cut}!`);
+              if (this.selectedItem.name !== "") {
+                alert(`Sorry, the ${this.selectedItem.name} doesn't come from the ${cut}!`);
+              }
             }
           }
           console.log(cut);
